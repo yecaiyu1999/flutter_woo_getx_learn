@@ -12,8 +12,11 @@ class ConfigService extends GetxService {
 
   PackageInfo? _platform;
   String get version => _platform?.version ?? '-';
-  //获取当前平台的语言
+  //多语言
   Locale locale = PlatformDispatcher.instance.locale;
+  //主题
+  final RxBool _isDarkModel = Get.isDarkMode.obs;
+  bool get isDarkModel => _isDarkModel.value;
 
   //初始化
   @override
@@ -21,10 +24,30 @@ class ConfigService extends GetxService {
     super.onReady();
     _getPlatform();
     initLocale();
+    initTheme();
   }
 
   Future<void> _getPlatform() async {
     _platform = await PackageInfo.fromPlatform();
+  }
+
+  //初始 theme
+  void initTheme() {
+    var themeCode = Storage().getString(Constants.storageThemeCode);
+    _isDarkModel.value = themeCode == 'dark' ? true : false;
+    Get.changeTheme(
+      themeCode == 'dark' ? AppTheme.dark : AppTheme.light,
+    );
+  }
+
+  //切换 theme
+  Future<void> switchThemeModel() async {
+    _isDarkModel.value = !_isDarkModel.value;
+    Get.changeTheme(
+      _isDarkModel.value == true ? AppTheme.dark : AppTheme.light,
+    );
+    await Storage().setString(
+        Constants.storageThemeCode, _isDarkModel.value ? 'dark' : 'light');
   }
 
   // 初始语言
