@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="woo.yecaiyu.cn.flutter_woo_getx_learn">
    <application
-        android:label="flutter_woo_getx_learn"
+        android:label="woo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
