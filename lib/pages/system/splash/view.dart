@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'index.dart';
+import 'package:flutter_woo_getx_learn/common/index.dart';
 
 class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("SplashPage"),
+    return Center(
+      child: Text("SplashPage - ${ConfigService.to.version}"),
     );
   }
 
