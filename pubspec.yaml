@@ -38,6 +38,8 @@ dependencies:
   get: ^4.6.5
   getwidget: ^4.0.0
   package_info_plus: ^4.2.0
+  shared_preferences: ^2.2.2
+  dio: ^5.3.3
 
 dev_dependencies:
   flutter_test:
