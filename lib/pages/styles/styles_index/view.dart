@@ -10,10 +10,15 @@ class StylesIndexPage extends GetView<StylesIndexController> {
   // 主视图
   Widget _buildView() {
     return Column(children: [
+      // Button 按钮
+      ListTile(
+        onTap: () => Get.toNamed(RouteNames.stylesButtons),
+        title: const Text("Button 按钮"),
+      ),
       // Image 图片
       ListTile(
         onTap: () => Get.toNamed(RouteNames.stylesImage),
-        title: const TextWidget.body1("Image 图片"),
+        title: const Text("Image 图片"),
       ),
       // Icon 图标
       ListTile(

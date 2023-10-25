@@ -194,9 +194,10 @@ class IconWidget extends StatelessWidget {
         padding: EdgeInsets.zero,
         position: GFBadgePosition.topEnd(top: -7, end: -8),
         counterChild: GFBadge(
-          color: badgeColor ?? AppColors.primary,
+          color: badgeColor ?? AppColors.onPrimary,
           shape: GFBadgeShape.circle,
           size: 20,
+          textColor: Colors.black,
           child: Text(
             badgeString!,
             style: const TextStyle(fontSize: 9),
