@@ -48,6 +48,7 @@ dependencies:
   extended_image: ^7.0.2
   intl: ^0.17.0
   flutter_screenutil: ^5.7.0
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
@@ -68,7 +69,9 @@ flutter_launcher_icons:
   image_path_ios: 'assets/icons/launcher_ios.png'
   image_path_android: "assets/icons/launcher_android.png"
   adaptive_icon_background: '#ffffff'
-  
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/icons/launcher_android.png" 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
