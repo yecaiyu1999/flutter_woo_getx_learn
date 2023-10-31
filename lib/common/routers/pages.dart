@@ -13,6 +13,7 @@ class RoutePages {
     //app首页
     GetPage(
       name: RouteNames.main,
+      // page: () => const StylesIndexPage(),
       page: () => const MainPage(),
     ),
 

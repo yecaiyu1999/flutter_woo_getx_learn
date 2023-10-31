@@ -117,11 +117,6 @@ class RequestInterceptors extends Interceptor {
             requestOptions: response.requestOptions,
             response: response,
             type: DioExceptionType.badResponse),
-        // DioError(
-        //   requestOptions: response.requestOptions,
-        //   response: response,
-        //   type: DioErrorType.response,
-        // ),
         true,
       );
     } else {
@@ -130,10 +125,10 @@ class RequestInterceptors extends Interceptor {
   }
 
   /// 退出并重新登录
-  // Future<void> _errorNoAuthLogout() async {
-  //   await UserService.to.logout();
-  //   Get.toNamed(RouteNames.systemLogin);
-  // }
+  Future<void> _errorNoAuthLogout() async {
+    // await UserService.to.logout();
+    Get.toNamed(RouteNames.systemLogin);
+  }
 
   @override
   Future<void> onError(
@@ -141,22 +136,22 @@ class RequestInterceptors extends Interceptor {
     switch (err.type) {
       case DioExceptionType.badResponse: // 服务端自定义错误体处理
         {
-          // final response = err.response;
-          // final errorMessage = ErrorMessageModel.fromJson(response?.data);
-          // switch (errorMessage.statusCode) {
-          //   case 401:
-          //     _errorNoAuthLogout();
-          //     break;
-          //   case 404:
-          //     break;
-          //   case 500:
-          //     break;
-          //   case 502:
-          //     break;
-          //   default:
-          //     break;
-          // }
-          // Loading.error(errorMessage.message);
+          final response = err.response;
+          final errorMessage = ErrorMessageModel.fromJson(response?.data);
+          switch (errorMessage.statusCode) {
+            case 401:
+              _errorNoAuthLogout();
+              break;
+            case 404:
+              break;
+            case 500:
+              break;
+            case 502:
+              break;
+            default:
+              break;
+          }
+          Loading.error(errorMessage.message);
         }
         break;
       case DioExceptionType.unknown:

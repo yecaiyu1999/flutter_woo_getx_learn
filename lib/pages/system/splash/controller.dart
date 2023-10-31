@@ -36,6 +36,7 @@ class SplashController extends GetxController {
     } else {
       Get.offAllNamed(RouteNames.main);
     }
+
     // 欢迎页
     // Future.delayed(const Duration(seconds: 1), () {
     //   Get.offAllNamed(RouteNames.systemWelcome);

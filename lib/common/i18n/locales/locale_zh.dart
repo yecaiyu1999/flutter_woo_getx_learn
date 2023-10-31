@@ -17,6 +17,13 @@ Map<String, String> localeZh = {
   // 样式
   LocaleKeys.stylesTitle: '样式 && 功能 && 调试',
 
+  // 验证提示
+  LocaleKeys.validatorRequired: '字段不能为空',
+  LocaleKeys.validatorEmail: '请输入 email 格式',
+  LocaleKeys.validatorMin: '长度不能小于 @size',
+  LocaleKeys.validatorMax: '长度不能大于 @size',
+  LocaleKeys.validatorPassword: '密码长度必须 大于 @min 小于 @max',
+
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: '选择您喜欢的产品',
   LocaleKeys.welcomeOneDesc:
@@ -30,4 +37,27 @@ Map<String, String> localeZh = {
   LocaleKeys.welcomeSkip: '跳过',
   LocaleKeys.welcomeNext: '下一页',
   LocaleKeys.welcomeStart: '立刻开始',
+
+  // 登录、注册 - 通用
+  LocaleKeys.loginForgotPassword: '忘记密码?',
+  LocaleKeys.loginSignIn: '登 陆',
+  LocaleKeys.loginSignUp: '注 册',
+  LocaleKeys.loginOrText: '- 或者 -',
+
+  // 注册 - register user
+  LocaleKeys.registerTitle: '欢迎',
+  LocaleKeys.registerDesc: '注册新账号',
+  LocaleKeys.registerFormName: '登录账号',
+  LocaleKeys.registerFormEmail: '电子邮件',
+  LocaleKeys.registerFormPhoneNumber: '电话号码',
+  LocaleKeys.registerFormPassword: '密码',
+  LocaleKeys.registerFormFirstName: '姓',
+  LocaleKeys.registerFormLastName: '名',
+  LocaleKeys.registerHaveAccount: '你有现成账号?',
+
+  // 注册PIN - register pin
+  LocaleKeys.registerPinTitle: '验证',
+  LocaleKeys.registerPinDesc: '我们将向您发送PIN码以继续您的帐户',
+  LocaleKeys.registerPinFormTip: 'Pin',
+  LocaleKeys.registerPinButton: '提交',
 };
