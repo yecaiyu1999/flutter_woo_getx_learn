@@ -25,6 +25,12 @@ Map<String, String> localeEn = {
   LocaleKeys.validatorPassword:
       'password must have between @min and @max digits',
 
+  // APP 导航
+  LocaleKeys.tabBarHome: 'Home',
+  LocaleKeys.tabBarCart: 'Cart',
+  LocaleKeys.tabBarMessage: 'Message',
+  LocaleKeys.tabBarProfile: 'Profile',
+
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: 'Choose Your Desire Product',
   LocaleKeys.welcomeOneDesc:

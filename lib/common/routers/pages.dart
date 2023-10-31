@@ -15,6 +15,7 @@ class RoutePages {
       name: RouteNames.main,
       // page: () => const StylesIndexPage(),
       page: () => const MainPage(),
+      binding: MainBinding(),
     ),
 
     GetPage(

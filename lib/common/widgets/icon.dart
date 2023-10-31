@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter_woo_getx_learn/common/index.dart';
-import 'package:getwidget/getwidget.dart';
 
 enum IconWidgetType { icon, svg, image, url }
 
@@ -176,31 +176,26 @@ class IconWidget extends StatelessWidget {
 
     // 圆点
     if (isDot == true) {
-      return GFIconBadge(
-        padding: EdgeInsets.zero,
-        position: GFBadgePosition.bottomEnd(bottom: 0, end: -2),
-        counterChild: GFBadge(
-          color: badgeColor ?? AppColors.primary,
-          shape: GFBadgeShape.circle,
-          size: 10,
-        ),
+      return badges.Badge(
+        position: badges.BadgePosition.bottomEnd(bottom: 0, end: -2),
         child: icon,
       );
     }
 
     // 文字、数字
     if (badgeString != null) {
-      return GFIconBadge(
-        padding: EdgeInsets.zero,
-        position: GFBadgePosition.topEnd(top: -7, end: -8),
-        counterChild: GFBadge(
-          color: badgeColor ?? AppColors.onPrimary,
-          shape: GFBadgeShape.circle,
-          size: 20,
-          textColor: Colors.black,
-          child: Text(
-            badgeString!,
-            style: const TextStyle(fontSize: 9),
+      return badges.Badge(
+        position: badges.BadgePosition.topEnd(top: -7, end: -8),
+        badgeStyle: badges.BadgeStyle(
+          elevation: 0,
+          padding: const EdgeInsets.all(4),
+          badgeColor: AppColors.primary,
+        ),
+        badgeContent: Text(
+          badgeString!,
+          style: TextStyle(
+            color: AppColors.onPrimary,
+            fontSize: 9,
           ),
         ),
         child: icon,

@@ -24,6 +24,12 @@ Map<String, String> localeZh = {
   LocaleKeys.validatorMax: '长度不能大于 @size',
   LocaleKeys.validatorPassword: '密码长度必须 大于 @min 小于 @max',
 
+  // APP 导航
+  LocaleKeys.tabBarHome: '首页',
+  LocaleKeys.tabBarCart: '购物车',
+  LocaleKeys.tabBarMessage: '消息',
+  LocaleKeys.tabBarProfile: '我的',
+
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: '选择您喜欢的产品',
   LocaleKeys.welcomeOneDesc:
