@@ -178,6 +178,11 @@ class IconWidget extends StatelessWidget {
     if (isDot == true) {
       return badges.Badge(
         position: badges.BadgePosition.bottomEnd(bottom: 0, end: -2),
+        badgeStyle: badges.BadgeStyle(
+          elevation: 0,
+          padding: const EdgeInsets.all(4),
+          badgeColor: AppColors.primary,
+        ),
         child: icon,
       );
     }
