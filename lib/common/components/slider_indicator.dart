@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_woo_getx_learn/common/index.dart';
 
-//slider indicator 指示器
+// slider indicator 指示器
 class SliderIndicatorWidget extends StatelessWidget {
-  ///个数
+  /// 个数
   final int length;
 
-  ///当前位置
+  /// 当前位置
   final int currentIndex;
 
-  ///颜色
+  /// 颜色
   final Color color;
 
-  ///是否圆形
+  /// 是否圆形
   final bool isCircle;
 
-  ///对齐方式
+  /// 对齐方式
   final MainAxisAlignment alignment;
 
   SliderIndicatorWidget(

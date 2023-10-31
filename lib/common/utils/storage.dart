@@ -1,8 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-//kv离线存储
+// kv离线存储
 class Storage {
-  //单例写法
+  // 单例写法
   static final Storage _instance = Storage._internal();
   factory Storage() => _instance;
   late final SharedPreferences _prefs;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_woo_getx_learn/common/index.dart';
 
-//页面标题 组件
+// 页面标题 组件
 class PageTitleWidget extends StatelessWidget {
-  ///标题
+  /// 标题
   final String title;
 
-  ///说明
+  /// 说明
   final String desc;
 
   const PageTitleWidget({super.key, required this.title, required this.desc});

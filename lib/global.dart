@@ -9,12 +9,13 @@ class Global {
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-    //工具类
+    // 工具类
     await Storage().init();
     Loading();
 
-    //初始化服务
+    // 初始化服务
     Get.put<ConfigService>(ConfigService());
     Get.put<WPHttpService>(WPHttpService());
+    Get.put<UserService>(UserService());
   }
 }

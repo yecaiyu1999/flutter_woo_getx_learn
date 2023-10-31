@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class RegisterPinController extends GetxController {
   RegisterPinController();
 
-  //注册界面传值
+  // 注册界面传值
   UserRegisterReq? req = Get.arguments;
 
   // ping 文字输入控制器
@@ -21,23 +21,18 @@ class RegisterPinController extends GetxController {
         : LocaleKeys.commonMessageIncorrect.trParams({"method": "Pin"});
   }
 
-  //注册
+  // 注册
   Future<void> _register() async {
     try {
       Loading.show();
 
-      //暂时提交，后续修改 ase 加密后处理
+      // 注册
       bool isOk = await UserApi.register(req);
       if (isOk) {
         Loading.success(
             LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
         Get.back(result: true);
       }
-
-      //提示成功
-      // Loading.success(
-      //     LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
-      // Get.back(result: true);
     } finally {
       Loading.dismiss();
     }

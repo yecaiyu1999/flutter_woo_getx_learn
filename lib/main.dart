@@ -27,17 +27,17 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           theme: ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
 
-          //路由
+          // 路由
           initialRoute: RouteNames.systemSplash,
           getPages: RoutePages.list,
           navigatorObservers: [RoutePages.observer],
 
-          //多语言
-          translations: Translation(), //词典
-          localizationsDelegates: Translation.localizationsDelegates, //代理
-          supportedLocales: Translation.supportedLocales, //支持的语言种类
-          locale: ConfigService.to.locale, //当前语言种类
-          fallbackLocale: Translation.fallbackLocale, //默认语言种类
+          // 多语言
+          translations: Translation(), // 词典
+          localizationsDelegates: Translation.localizationsDelegates, // 代理
+          supportedLocales: Translation.supportedLocales, // 支持的语言种类
+          locale: ConfigService.to.locale, // 当前语言种类
+          fallbackLocale: Translation.fallbackLocale, // 默认语言种类
 
           builder: (context, widget) {
             widget = EasyLoading.init()(context, widget); // EasyLoading 初始化

@@ -58,7 +58,8 @@ class RegisterPinPage extends GetView<RegisterPinController> {
           .toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
           )
-          .paddingHorizontal(AppSpace.page),
+          .paddingHorizontal(AppSpace.page)
+          .marginOnly(top: 50),
     );
   }
 

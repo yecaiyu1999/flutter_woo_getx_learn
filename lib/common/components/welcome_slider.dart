@@ -3,12 +3,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../index.dart';
 
-//欢迎 slider
+// 欢迎 slider
 class WelcomeSliderWidget extends StatelessWidget {
-  //项目
+  // 项目
   final List<WelcomeModel> items;
 
-  //页数发生变化
+  // 页数发生变化
   final Function(int) onPageChanged;
 
   //控制器
@@ -24,7 +24,7 @@ class WelcomeSliderWidget extends StatelessWidget {
   Widget sliderItem(WelcomeModel item) {
     return Builder(builder: (context) {
       return [
-        //图
+        // 图
         if (item.image != null)
           ImageWidget.asset(
             item.image!,

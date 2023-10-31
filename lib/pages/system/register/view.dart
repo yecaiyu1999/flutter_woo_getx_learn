@@ -136,7 +136,8 @@ class RegisterPage extends GetView<RegisterController> {
           .toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
           )
-          .paddingHorizontal(AppSpace.page),
+          .paddingHorizontal(AppSpace.page)
+          .marginOnly(top: 50),
     );
   }
 

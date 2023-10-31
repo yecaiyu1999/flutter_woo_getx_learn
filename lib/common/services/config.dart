@@ -5,23 +5,23 @@ import 'package:get/get.dart';
 
 import '../index.dart';
 
-//配置服务
+// 配置服务
 class ConfigService extends GetxService {
-  //这是一个单例写法
+  // 这是一个单例写法
   static ConfigService get to => Get.find();
 
   PackageInfo? _platform;
   String get version => _platform?.version ?? '-';
-  //多语言
+  // 多语言
   Locale locale = PlatformDispatcher.instance.locale;
-  //主题
+  // 主题
   final RxBool _isDarkModel = Get.isDarkMode.obs;
   bool get isDarkModel => _isDarkModel.value;
 
-  //是否首次打开
+  // 是否首次打开
   bool get isAlreadyOpen => Storage().getBool(Constants.storageAlreadyOpen);
 
-  //初始化
+  // 初始化
   @override
   void onReady() {
     super.onReady();
@@ -39,7 +39,7 @@ class ConfigService extends GetxService {
     Storage().setBool(Constants.storageAlreadyOpen, true);
   }
 
-  //初始 theme
+  // 初始 theme
   void initTheme() {
     var themeCode = Storage().getString(Constants.storageThemeCode);
     _isDarkModel.value = themeCode == 'dark' ? true : false;
@@ -48,7 +48,7 @@ class ConfigService extends GetxService {
     );
   }
 
-  //切换 theme
+  // 切换 theme
   Future<void> switchThemeModel() async {
     _isDarkModel.value = !_isDarkModel.value;
     Get.changeTheme(

@@ -10,7 +10,7 @@ class RoutePages {
 
   // 列表
   static List<GetPage> list = [
-    //app首页
+    // app首页
     GetPage(
       name: RouteNames.main,
       // page: () => const StylesIndexPage(),

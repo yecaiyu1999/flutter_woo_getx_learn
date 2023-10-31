@@ -12,18 +12,18 @@ class WPHttpService extends GetxService {
   void onInit() {
     super.onInit();
 
-    //初始 dio
+    // 初始 dio
     var options = BaseOptions(
       baseUrl: Constants.apiUrl,
-      connectTimeout: const Duration(seconds: 10), //10秒
-      receiveTimeout: const Duration(seconds: 5), //5秒
+      connectTimeout: const Duration(seconds: 10), // 10秒
+      receiveTimeout: const Duration(seconds: 5), // 5秒
       headers: {},
       contentType: 'application/json; charset=utf-8',
       responseType: ResponseType.json,
     );
     _dio = Dio(options);
 
-    //拦截器
+    // 拦截器
     _dio.interceptors.add(RequestInterceptors());
   }
 
@@ -97,9 +97,9 @@ class RequestInterceptors extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     // super.onRequest(options, handler);
-    // if (UserService.to.hasToken) {
-    //   options.headers['Authorization'] = 'Bearer ${UserService.to.token}';
-    // }
+    if (UserService.to.hasToken) {
+      options.headers['Authorization'] = 'Bearer ${UserService.to.token}';
+    }
     return handler.next(options);
     // 如果你想完成请求并返回一些自定义数据，你可以resolve一个Response对象 `handler.resolve(response)`。
     // 这样请求将会被终止，上层then会被调用，then中返回的数据将是你的自定义response.
@@ -126,7 +126,7 @@ class RequestInterceptors extends Interceptor {
 
   /// 退出并重新登录
   Future<void> _errorNoAuthLogout() async {
-    // await UserService.to.logout();
+    await UserService.to.logout();
     Get.toNamed(RouteNames.systemLogin);
   }
 

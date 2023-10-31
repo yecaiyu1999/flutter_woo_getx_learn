@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-///表单验证
+/// 表单验证
 class Validators {
   static FormFieldValidator<String> password(int min, int max, String m) =>
       (v) {
