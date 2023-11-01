@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
 // kv离线存储
 class Storage {
@@ -11,6 +12,10 @@ class Storage {
 
   Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
+  }
+
+  Future<bool> setJson(String key, Object value) async {
+    return await _prefs.setString(key, jsonEncode(value));
   }
 
   Future<void> setString(String key, String value) async {
