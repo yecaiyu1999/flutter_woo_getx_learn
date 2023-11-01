@@ -39,11 +39,16 @@ class HomeController extends GetxController {
     );
     // 新商品
     newProductList = await ProductApi.products(ProductReq());
+    // 颜色
+    var attributeColors = await ProductApi.attributes(1);
+    // 尺寸
+    var attributeSizes = await ProductApi.attributes(2);
 
     // 保存离线数据
+    Storage()
+        .setJson(Constants.storageProductsAttributesColors, attributeColors);
+    Storage().setJson(Constants.storageProductsAttributesSizes, attributeSizes);
     Storage().setJson(Constants.storageProductsCategories, categoryItems);
-
-    // 保存离线数据
     Storage().setJson(Constants.storageHomeBanner, bannerItems);
     Storage().setJson(Constants.storageHomeCategories, categoryItems);
     Storage().setJson(Constants.storageHomeFlashSell, flashShellProductList);
