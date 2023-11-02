@@ -58,10 +58,10 @@ class UserService extends GetxService {
 
   /// 注销
   Future<void> logout() async {
-    // if (_isLogin.value) await UserApi.logout();
     await Storage().remove(Constants.storageToken);
     _profile(UserProfileModel());
     _isLogin.value = false;
+    token = '';
   }
 
   /// 检查是否登录

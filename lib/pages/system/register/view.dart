@@ -136,8 +136,7 @@ class RegisterPage extends GetView<RegisterController> {
           .toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
           )
-          .paddingHorizontal(AppSpace.page)
-          .marginOnly(top: 50),
+          .paddingHorizontal(AppSpace.page),
     );
   }
 
@@ -148,7 +147,7 @@ class RegisterPage extends GetView<RegisterController> {
       id: "register",
       builder: (_) {
         return Scaffold(
-          // appBar: AppBar(title: const Text("register")),
+          appBar: AppBar(title: const Text("注册")),
           body: SafeArea(
             child: _buildView(),
           ),

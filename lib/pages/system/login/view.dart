@@ -109,8 +109,7 @@ class LoginPage extends GetView<LoginController> {
           .toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,
           )
-          .paddingHorizontal(AppSpace.page)
-          .marginOnly(top: 50),
+          .paddingHorizontal(AppSpace.page),
     );
   }
 
@@ -121,7 +120,7 @@ class LoginPage extends GetView<LoginController> {
       id: "login",
       builder: (_) {
         return Scaffold(
-          // appBar: AppBar(title: const Text("login")),
+          appBar: AppBar(title: const Text("登录")),
           body: SafeArea(
             child: _buildView(),
           ),

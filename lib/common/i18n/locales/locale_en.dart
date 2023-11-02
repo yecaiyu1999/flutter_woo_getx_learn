@@ -94,4 +94,33 @@ Map<String, String> localeEn = {
   LocaleKeys.gDetailTabReviews: 'Reviews',
   LocaleKeys.gDetailBtnAddCart: 'Add To Cart',
   LocaleKeys.gDetailBtnBuy: 'Buy Now',
+
+  // 搜索
+  LocaleKeys.searchPlaceholder: 'Search Product',
+  LocaleKeys.searchOrder: 'Best Match',
+  LocaleKeys.searchFilter: 'Filter',
+  LocaleKeys.searchFilterPrice: 'Price',
+  LocaleKeys.searchFilterSize: 'Size',
+  LocaleKeys.searchFilterColor: 'Color',
+  LocaleKeys.searchFilterReview: 'Review',
+  LocaleKeys.searchFilterBrand: 'Brand',
+  LocaleKeys.searchFilterGender: 'Gender',
+  LocaleKeys.searchFilterCondition: 'Condition',
+
+  // 我的
+  LocaleKeys.myTabWishlist: 'Wishlist',
+  LocaleKeys.myTabFollowing: 'Following',
+  LocaleKeys.myTabVoucher: 'Voucher',
+  LocaleKeys.myBtnMyOrder: 'My Order',
+  LocaleKeys.myBtnMyWallet: 'My Wallet',
+  LocaleKeys.myBtnEditProfile: 'Edit Profile',
+  LocaleKeys.myBtnAddress: 'Address',
+  LocaleKeys.myBtnNotification: 'Notification',
+  LocaleKeys.myBtnLanguage: 'Language',
+  LocaleKeys.myBtnTheme: 'Theme',
+  LocaleKeys.myBtnWinGift: 'Win Gift',
+  LocaleKeys.myBtnLogout: 'Logout',
+  LocaleKeys.myBtnStyles: 'Styles',
+  LocaleKeys.myBtnBillingAddress: 'Billing address',
+  LocaleKeys.myBtnShippingAddress: 'Shipping address',
 };

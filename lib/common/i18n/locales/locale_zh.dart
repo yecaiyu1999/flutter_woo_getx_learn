@@ -93,4 +93,33 @@ Map<String, String> localeZh = {
   LocaleKeys.gDetailTabReviews: '评论',
   LocaleKeys.gDetailBtnAddCart: '加入购物车',
   LocaleKeys.gDetailBtnBuy: '立刻购买',
+
+  // 搜索
+  LocaleKeys.searchPlaceholder: '搜索商品',
+  LocaleKeys.searchOrder: '最佳匹配',
+  LocaleKeys.searchFilter: '筛选',
+  LocaleKeys.searchFilterPrice: '价格',
+  LocaleKeys.searchFilterSize: '尺寸',
+  LocaleKeys.searchFilterColor: '颜色',
+  LocaleKeys.searchFilterReview: '星级',
+  LocaleKeys.searchFilterBrand: '品牌',
+  LocaleKeys.searchFilterGender: '性别',
+  LocaleKeys.searchFilterCondition: '状况',
+
+  // 我的
+  LocaleKeys.myTabWishlist: '喜欢',
+  LocaleKeys.myTabFollowing: '关注',
+  LocaleKeys.myTabVoucher: '收据',
+  LocaleKeys.myBtnMyOrder: '我的订单',
+  LocaleKeys.myBtnMyWallet: '我的钱包',
+  LocaleKeys.myBtnEditProfile: '编辑个人资料',
+  LocaleKeys.myBtnAddress: '送货地址',
+  LocaleKeys.myBtnNotification: '消息',
+  LocaleKeys.myBtnLanguage: '语言',
+  LocaleKeys.myBtnTheme: '主题',
+  LocaleKeys.myBtnWinGift: '赢取礼物',
+  LocaleKeys.myBtnStyles: '样式组件',
+  LocaleKeys.myBtnLogout: '注销',
+  LocaleKeys.myBtnBillingAddress: '发票地址',
+  LocaleKeys.myBtnShippingAddress: '配送地址',
 };

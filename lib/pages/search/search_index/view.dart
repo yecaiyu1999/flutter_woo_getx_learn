@@ -50,7 +50,7 @@ class SearchIndexPage extends GetView<SearchIndexController> {
 
   // 主视图
   Widget _buildView() {
-    return _buildList();
+    return controller.tagsList.isEmpty ? const PlaceholdWidget() : _buildList();
   }
 
   @override

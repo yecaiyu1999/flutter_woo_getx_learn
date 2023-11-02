@@ -70,7 +70,7 @@ class RegisterPinPage extends GetView<RegisterPinController> {
       id: "register_pin",
       builder: (_) {
         return Scaffold(
-          // appBar: AppBar(title: const Text("register_pin")),
+          // appBar: AppBar(title: const Text("验证")),
           body: SafeArea(
             child: _buildView(),
           ),
