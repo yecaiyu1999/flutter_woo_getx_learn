@@ -59,6 +59,10 @@ dependencies:
   photo_view: ^0.14.0
   dropdown_button2: ^2.1.4
   another_xlider: ^3.0.1
+  # picker 选择器
+  flutter_picker: ^2.1.0
+  # 底部弹出
+  modal_bottom_sheet: ^3.0.0-pre
 
 dev_dependencies:
   flutter_test:
