@@ -21,6 +21,9 @@ class SmartRefresherFooterWidget extends StatelessWidget {
         height: iconSize ?? 25,
       ), // 加载中
       outerBuilder: (child) => child.center().height(height ?? 60), // 内容
+      loadingText: '正在加载更多...',
+      canLoadingText: '加载更多',
+      noDataText: '—— 没有更多了 ——',
     );
   }
 }

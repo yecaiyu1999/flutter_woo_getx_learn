@@ -25,7 +25,13 @@ class MyApp extends StatelessWidget {
       // 一般返回一个MaterialApp类型的Function()
       builder: (context, child) {
         return RefreshConfiguration(
-          headerBuilder: () => const ClassicHeader(), // 自定义刷新头部
+          headerBuilder: () => const ClassicHeader(
+            idleText: '下拉刷新',
+            releaseText: '松开开始刷新',
+            refreshingText: '正在刷新...',
+            completeText: '刷新成功',
+            failedText: '刷新失败',
+          ), // 自定义刷新头部
           footerBuilder: () => const ClassicFooter(), // 自定义刷新尾部
           hideFooterWhenNotFull: true, // 当列表不满一页时，是否隐藏刷新尾部
           headerTriggerDistance: 80, // 触发刷新的距离

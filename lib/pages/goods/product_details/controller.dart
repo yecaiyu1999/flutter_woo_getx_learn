@@ -228,6 +228,14 @@ class ProductDetailsController extends GetxController
     update(["product_reviews"]);
   }
 
+  // 评论图片浏览
+  void onReviewsGalleryTap(int index) {
+    Get.to(GalleryWidget(
+      initialIndex: index,
+      items: reviewImages,
+    ));
+  }
+
   @override
   void onInit() async {
     super.onInit();
