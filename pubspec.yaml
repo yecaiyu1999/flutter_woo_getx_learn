@@ -63,6 +63,9 @@ dependencies:
   flutter_picker: ^2.1.0
   # 底部弹出
   modal_bottom_sheet: ^3.0.0-pre
+  permission_handler: ^11.0.1
+  wechat_assets_picker: 8.4.0
+  wechat_camera_picker: ^4.0.1
 
 dev_dependencies:
   flutter_test:
