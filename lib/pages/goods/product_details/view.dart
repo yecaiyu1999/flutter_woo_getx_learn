@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_woo_getx_learn/common/index.dart';
 import 'package:get/get.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'index.dart';
 import 'widgets/index.dart';
@@ -173,6 +174,29 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
           ].toColumn();
   }
 
+  // 底部按钮
+  Widget _buildButtons() {
+    return <Widget>[
+      // 加入购物车
+      ButtonWidget.secondary(
+        LocaleKeys.gDetailBtnAddCart.tr,
+        onTap: controller.onAddCartTap,
+      ).expanded(),
+
+      // 间距
+      SizedBox(width: AppSpace.iconTextLarge),
+
+      // 立刻购物
+      ButtonWidget.primary(
+        LocaleKeys.gDetailBtnBuy.tr,
+      ).expanded()
+    ]
+        .toRow(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceAround)
+        .paddingHorizontal(AppSpace.page);
+  }
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ProductDetailsController>(
@@ -188,7 +212,22 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
                   controller.product?.name ?? LocaleKeys.gDetailTitle.tr),
           // 内容
           body: SafeArea(
-            child: _buildView(),
+            child: <Widget>[
+              // 主视图
+              SmartRefresher(
+                controller: controller.mainRefreshController, // 刷新控制器
+                onRefresh: controller.onMainRefresh, // 下拉刷新回调
+                child: _buildView(),
+              ),
+
+              // 底部按钮
+              if (controller.product != null)
+                _buildButtons().positioned(
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                ),
+            ].toStack(),
           ),
         );
       },

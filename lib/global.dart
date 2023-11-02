@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_woo_getx_learn/common/services/cart.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_woo_getx_learn/common/index.dart';
@@ -20,6 +21,7 @@ class Global {
     Get.put<ConfigService>(ConfigService());
     Get.put<WPHttpService>(WPHttpService());
     Get.put<UserService>(UserService());
+    Get.put<CartService>(CartService());
   }
 
   // 系统样式
