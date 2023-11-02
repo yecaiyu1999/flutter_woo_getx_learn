@@ -56,7 +56,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 33
     }
-
+3
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

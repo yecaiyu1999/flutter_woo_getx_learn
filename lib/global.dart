@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_woo_getx_learn/common/services/cart.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter_woo_getx_learn/common/index.dart';
@@ -45,7 +44,7 @@ class Global {
       // 自定义样式
       SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
         // 顶部状态栏颜色
-        statusBarColor: Colors.transparent,
+        // statusBarColor: Colors.transparent,
         // 该属性仅用于 iOS 设备顶部状态栏亮度
         // statusBarBrightness: Brightness.light,
         // 顶部状态栏图标的亮度

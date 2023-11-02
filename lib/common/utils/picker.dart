@@ -59,7 +59,6 @@ class ActionPicker {
     SpecialItemPosition specialItemPosition = SpecialItemPosition.none,
   }) async {
     var privilege = await Privilege.photos();
-    if (context.mounted) return null;
     if (!privilege.result) {
       await ActionDialog.normal(
         context: context,
@@ -100,7 +99,6 @@ class ActionPicker {
     bool enableRecording = true,
   }) async {
     var privilege = await Privilege.camera();
-    if (context.mounted) return null;
     if (!privilege.result) {
       await ActionDialog.normal(
         context: context,
