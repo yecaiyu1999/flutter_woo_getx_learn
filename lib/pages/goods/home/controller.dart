@@ -97,7 +97,9 @@ class HomeController extends GetxController {
   }
 
   // 导航点击事件
-  void onAppBarTap() {}
+  void onAppBarTap() {
+    Get.toNamed(RouteNames.searchSearchIndex);
+  }
 
   // Banner 切换事件
   void onChangeBanner(int index, _) {
