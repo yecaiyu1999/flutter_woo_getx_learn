@@ -130,9 +130,10 @@ class ActionBottomSheet {
       // expand
       expand: false,
       // 内容
-      builder: (context) => SafeArea(
-        child: child,
-      ),
+      builder: (context) => child,
+      // builder: (context) => SafeArea(
+      //   child: child,
+      // ),
       // builder: (context) =>
       // SafeArea(child: child.paddingAll(padding ?? AppSpace.card)
       // .decorated(

@@ -51,7 +51,7 @@ class LineItem {
         taxes: json['taxes'] as List<dynamic>?,
         metaData: json['meta_data'] as List<dynamic>?,
         sku: json['sku'] as String?,
-        price: double.parse(json['price'].toString()),
+        price: double.parse("${json['price']}"),
         parentName: json['parent_name'] as dynamic,
         product: json['product'] == null
             ? null

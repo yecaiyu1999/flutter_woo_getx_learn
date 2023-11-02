@@ -17,18 +17,9 @@ class RoutePages {
       page: () => const MainPage(),
       binding: MainBinding(),
     ),
-
-    GetPage(
-      name: RouteNames.cartApplyPromoCode,
-      page: () => const ApplyPromoCodePage(),
-    ),
     GetPage(
       name: RouteNames.cartBuyDone,
       page: () => const BuyDonePage(),
-    ),
-    GetPage(
-      name: RouteNames.cartBuyNow,
-      page: () => const BuyNowPage(),
     ),
     GetPage(
       name: RouteNames.cartCartIndex,
