@@ -10,6 +10,7 @@ export './request/user_login_req.dart';
 export './request/product_req.dart';
 export './request/review_req.dart';
 export './request/tag_req.dart';
+export './request/order.dart';
 
 export './woo/user_profile_model/user_profile_model.dart';
 export './woo/category_model/category_model.dart';
