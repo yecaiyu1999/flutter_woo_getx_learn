@@ -12,6 +12,7 @@ AppBar mainAppBarWidget({
   double? iconSize, // 图标大小
 }) {
   return AppBar(
+    backgroundColor: Color(0xFFFAFAFA),
     // 最左侧按钮
     leading: leading,
     // 按钮和标题组件间距

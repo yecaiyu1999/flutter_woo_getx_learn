@@ -39,8 +39,13 @@ class MyApp extends StatelessWidget {
           footerTriggerDistance: 150, // 触发加载的距离
           child: GetMaterialApp(
             title: 'Woo',
-            theme:
-                ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
+
+            // 主题样式
+            theme: AppTheme.light,
+            darkTheme: AppTheme.dark,
+            // 主题
+            themeMode:
+                ConfigService.to.isDarkModel ? ThemeMode.dark : ThemeMode.light,
 
             // 路由
             initialRoute: RouteNames.systemSplash,

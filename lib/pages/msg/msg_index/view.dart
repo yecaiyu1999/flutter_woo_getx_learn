@@ -20,7 +20,10 @@ class MsgIndexPage extends GetView<MsgIndexController> {
       id: "msg_index",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("msg_index")),
+          appBar: AppBar(
+            title: const Text("msg_index"),
+            backgroundColor: Colors.transparent,
+          ),
           body: SafeArea(
             child: _buildView(),
           ),

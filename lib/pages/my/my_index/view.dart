@@ -12,7 +12,6 @@ class MyIndexPage extends GetView<MyIndexController> {
   // 顶部 APP 导航栏
   Widget _buildAppBar() {
     return SliverAppBar(
-      // 背景色
       backgroundColor: Colors.transparent,
       // 固定在顶部
       pinned: true,
@@ -215,7 +214,12 @@ class MyIndexPage extends GetView<MyIndexController> {
       id: "my_index",
       builder: (_) {
         return Scaffold(
-          // appBar: AppBar(title: const Text("my_index")),
+          appBar: AppBar(
+            toolbarHeight: 0,
+            backgroundColor: ConfigService.to.isDarkModel
+                ? const Color(0xFF003BB1)
+                : const Color(0xFFDCE1FF),
+          ),
           body: SafeArea(
             child: _buildView(),
           ),

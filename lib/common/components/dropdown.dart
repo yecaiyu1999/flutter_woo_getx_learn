@@ -57,22 +57,16 @@ class DropdownWidget extends StatelessWidget {
         value: selectedValue,
         // 改变事件
         onChanged: onChanged,
-        iconStyleData: IconStyleData(
-          // 图标
-          icon: IconWidget.icon(
-            Icons.expand_more,
-            color: iconColor ?? AppColors.primary,
-          ),
+        // 图标
+        icon: IconWidget.icon(
+          Icons.expand_more,
+          color: iconColor ?? AppColors.primary,
         ),
-        buttonStyleData: ButtonStyleData(
-          // 按钮 padding
-          padding: buttonPadding ??
-              EdgeInsets.symmetric(horizontal: AppSpace.iconTextSmail),
-        ),
-        dropdownStyleData: const DropdownStyleData(
-          // 偏移
-          offset: Offset(0, 0),
-        ),
+        // 按钮 padding
+        buttonPadding: buttonPadding ??
+            EdgeInsets.symmetric(horizontal: AppSpace.iconTextSmail),
+        // 偏移
+        offset: const Offset(0, 0),
       ),
     );
   }

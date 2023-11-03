@@ -3,16 +3,28 @@ import 'package:flutter/services.dart';
 
 import 'index.dart';
 
+/// 主题
 class AppTheme {
-  // 亮色
+  /// 亮色
   static ThemeData light = ThemeData(
+    useMaterial3: false,
     colorScheme: lightColorScheme,
-    fontFamily: 'Montserrat',
+    extensions: const <ThemeExtension<dynamic>>[
+      ExtBaseColorTheme.light,
+      ExtWooColorTheme.light,
+    ],
+    fontFamily: "Montserrat",
     appBarTheme: const AppBarTheme(
-      // appBar 暗色，和主题色相反
-      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      // appBar 暗色 , 和主题色相反
+      systemOverlayStyle: SystemUiOverlayStyle(
+        systemNavigationBarColor: Color(0xFFFAFAFA),
+        systemNavigationBarIconBrightness: Brightness.light,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+        statusBarColor: Colors.transparent,
+      ),
       // 背景透明
-      backgroundColor: Colors.transparent,
+      // backgroundColor: Colors.transparent,
       // 取消阴影
       elevation: 0,
       // 图标样式
@@ -28,12 +40,25 @@ class AppTheme {
     ),
   );
 
-  // 暗色
+  /// 暗色
   static ThemeData dark = ThemeData(
+    useMaterial3: false,
     colorScheme: darkColorScheme,
-    fontFamily: 'Montserrat',
+    extensions: const <ThemeExtension<dynamic>>[
+      ExtBaseColorTheme.dark,
+      ExtWooColorTheme.dark,
+    ],
+    fontFamily: "Montserrat",
     appBarTheme: const AppBarTheme(
-      systemOverlayStyle: SystemUiOverlayStyle.light,
+      // 取消阴影
+      elevation: 0,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        systemNavigationBarColor: Color(0xFF1C1C1C),
+        systemNavigationBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.dark,
+        statusBarColor: Colors.transparent,
+      ), // appBar 亮色 , 和主题色相反
     ),
   );
 }

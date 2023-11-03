@@ -14,7 +14,6 @@ class HomePage extends GetView<HomeController> {
   // 导航栏
   AppBar _buildAppBar() {
     return AppBar(
-      // 背景透明
       backgroundColor: Colors.transparent,
       // 取消阴影
       elevation: 0,

@@ -1,7 +1,4 @@
 import 'package:another_xlider/another_xlider.dart';
-import 'package:another_xlider/models/handler.dart';
-import 'package:another_xlider/models/tooltip/tooltip.dart';
-import 'package:another_xlider/models/trackbar.dart';
 import 'package:flutter/material.dart';
 
 import '../index.dart';

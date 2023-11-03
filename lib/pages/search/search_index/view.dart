@@ -10,6 +10,7 @@ class SearchIndexPage extends GetView<SearchIndexController> {
   // 导航栏
   AppBar _buildAppBar() {
     return AppBar(
+      backgroundColor: Color(0xFFFAFAFA),
       titleSpacing: AppSpace.listItem,
       // 搜索栏
       title: InputWidget.textBorder(

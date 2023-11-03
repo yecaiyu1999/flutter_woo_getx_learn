@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:badges/badges.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:badges/badges.dart' as badges;
-import 'package:flutter_woo_getx_learn/common/index.dart';
+
+import '../index.dart';
 
 enum IconWidgetType { icon, svg, image, url }
 
@@ -31,9 +32,6 @@ class IconWidget extends StatelessWidget {
   /// 颜色
   final Color? color;
 
-  //徽标颜色
-  final Color? badgeColor;
-
   /// 是否小圆点
   final bool? isDot;
 
@@ -52,7 +50,6 @@ class IconWidget extends StatelessWidget {
     this.color,
     this.iconData,
     this.isDot,
-    this.badgeColor,
     this.badgeString,
     this.assetName,
     this.imageUrl,
@@ -68,7 +65,6 @@ class IconWidget extends StatelessWidget {
     this.height,
     this.color,
     this.isDot,
-    this.badgeColor,
     this.badgeString,
     this.assetName,
     this.imageUrl,
@@ -87,7 +83,6 @@ class IconWidget extends StatelessWidget {
     this.color,
     this.iconData,
     this.isDot,
-    this.badgeColor,
     this.badgeString,
     this.imageUrl,
     this.fit,
@@ -105,7 +100,6 @@ class IconWidget extends StatelessWidget {
     this.color,
     this.iconData,
     this.isDot,
-    this.badgeColor,
     this.badgeString,
     this.imageUrl,
     this.fit,
@@ -123,7 +117,6 @@ class IconWidget extends StatelessWidget {
     this.color,
     this.iconData,
     this.isDot,
-    this.badgeColor,
     this.badgeString,
     this.assetName,
     this.fit,
@@ -139,7 +132,7 @@ class IconWidget extends StatelessWidget {
         icon = Icon(
           iconData,
           size: size,
-          color: color,
+          color: color ?? AppColors.secondary,
         );
         break;
       case IconWidgetType.svg:
@@ -147,8 +140,7 @@ class IconWidget extends StatelessWidget {
           assetName!,
           width: width ?? size,
           height: height ?? size,
-          colorFilter:
-              color == null ? null : ColorFilter.mode(color!, BlendMode.srcIn),
+          color: color,
           fit: fit ?? BoxFit.contain,
         );
         break;
@@ -176,26 +168,15 @@ class IconWidget extends StatelessWidget {
 
     // 圆点
     if (isDot == true) {
-      return badges.Badge(
-        position: badges.BadgePosition.bottomEnd(bottom: 0, end: -2),
-        badgeStyle: badges.BadgeStyle(
-          elevation: 0,
-          padding: const EdgeInsets.all(4),
-          badgeColor: AppColors.primary,
-        ),
+      return Badge(
+        position: BadgePosition.bottomEnd(bottom: 0, end: -2),
         child: icon,
       );
     }
 
     // 文字、数字
     if (badgeString != null) {
-      return badges.Badge(
-        position: badges.BadgePosition.topEnd(top: -7, end: -8),
-        badgeStyle: badges.BadgeStyle(
-          elevation: 0,
-          padding: const EdgeInsets.all(4),
-          badgeColor: AppColors.primary,
-        ),
+      return Badge(
         badgeContent: Text(
           badgeString!,
           style: TextStyle(
@@ -203,6 +184,7 @@ class IconWidget extends StatelessWidget {
             fontSize: 9,
           ),
         ),
+        position: BadgePosition.topEnd(top: -7, end: -8),
         child: icon,
       );
     }

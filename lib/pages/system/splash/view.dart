@@ -8,7 +8,7 @@ class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   // 主视图
-  Widget _buildView() {
+  Widget _buildView(context) {
     return const ImageWidget.asset(
       AssetsImages.splashJpg,
       fit: BoxFit.fill,
@@ -21,7 +21,7 @@ class SplashPage extends GetView<SplashController> {
       init: SplashController(),
       id: "splash",
       builder: (_) {
-        return _buildView();
+        return _buildView(context);
       },
     );
   }

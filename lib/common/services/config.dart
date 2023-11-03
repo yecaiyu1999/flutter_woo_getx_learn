@@ -43,19 +43,18 @@ class ConfigService extends GetxService {
   void initTheme() {
     var themeCode = Storage().getString(Constants.storageThemeCode);
     _isDarkModel.value = themeCode == 'dark' ? true : false;
-    Get.changeTheme(
-      themeCode == 'dark' ? AppTheme.dark : AppTheme.light,
-    );
   }
 
   // 切换 theme
   Future<void> switchThemeModel() async {
     _isDarkModel.value = !_isDarkModel.value;
-    Get.changeTheme(
-      _isDarkModel.value == true ? AppTheme.dark : AppTheme.light,
+    Get.changeThemeMode(
+      _isDarkModel.value == true ? ThemeMode.dark : ThemeMode.light,
     );
-    await Storage().setString(
-        Constants.storageThemeCode, _isDarkModel.value ? 'dark' : 'light');
+
+    await Storage().setString(Constants.storageThemeCode,
+        _isDarkModel.value == true ? 'dark' : 'light');
+    Get.offAllNamed(RouteNames.systemSplash);
   }
 
   // 初始语言
