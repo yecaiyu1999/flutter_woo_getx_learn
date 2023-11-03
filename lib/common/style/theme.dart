@@ -17,7 +17,7 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       // appBar 暗色 , 和主题色相反
       systemOverlayStyle: SystemUiOverlayStyle(
-        systemNavigationBarColor: Color(0xFFFAFAFA),
+        systemNavigationBarColor: Color(0xFFFeFBFF),
         systemNavigationBarIconBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.dark,
         statusBarBrightness: Brightness.light,
